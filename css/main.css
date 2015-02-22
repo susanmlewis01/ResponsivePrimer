@@ -9,7 +9,6 @@ html body {
 
 #wrapper {
 	max-width: 100%;
-	/* margin-top: 0; remove: redudent with the margin setting below */
 	margin: 0 auto;
 	padding: 0 5%;
 }
@@ -24,7 +23,7 @@ HEADING
 header {
 	float: center;
 	margin: 0 0 30px 0; /* might want to consider %, not px for responsive design */
-	padding: 0 0 0 0; /* can just say padding: 0; and it's the same as lising 0 for all sides */
+	padding: 0; 
 	width: 100%;
 	position: fixed;
 }
@@ -35,7 +34,7 @@ header {
 	padding: 0 0 0;
 	font-family: 'Open Sans', sans-serif;
 	margin: 15 0;
-  font-size: 1.55em;
+    font-size: 1.55em;
 	font-weight: bold;
 }
 
@@ -75,13 +74,11 @@ footer {
   font-size: 0.75em;
   text-align: center;
   clear: both;
-<<<<<<< HEAD
   padding-top: 50px;
   color: #ccc;
-=======
   padding-top: 50px; /* might consdier % instead of px */
   color: #333;
->>>>>>> db92ae268abccdd863b5aeea9166437362726c77
+
 }
 
 /************************
@@ -99,10 +96,10 @@ nav {
 	position: fixed;
 	width: 100%;
 	font-size: 0.75em;
-  text-align: center;
-  clear: both;
-  padding: 0 10px 0 10px;
-  background-color: #ccc;
+	text-align: center;
+	clear: both;
+    padding: 0 10px 0 10px;
+    background-color: #ccc;
 }
 
 nav > ul {
