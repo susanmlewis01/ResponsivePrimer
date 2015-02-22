@@ -8,10 +8,10 @@ html body {
 }
 
 #wrapper {
-	max-width: 940px;
-	margin-top: 0;
+	max-width: 100%;
+	/* margin-top: 0; remove: redudent with the margin setting below */
 	margin: 0 auto;
-	padding; 0 5%;
+	padding: 0 5%;
 }
 
 a {
@@ -23,8 +23,8 @@ HEADING
 **************************/
 header {
 	float: center;
-	margin: 0 0 30px 0;
-	padding: 0 0 0 0;
+	margin: 0 0 30px 0; /* might want to consider %, not px for responsive design */
+	padding: 0 0 0 0; /* can just say padding: 0; and it's the same as lising 0 for all sides */
 	width: 100%;
 	position: fixed;
 }
@@ -35,7 +35,7 @@ header {
 	padding: 0 0 0;
 	font-family: 'Open Sans', sans-serif;
 	margin: 15 0;
-    font-size: 1.55em;
+  font-size: 1.55em;
 	font-weight: bold;
 }
 
@@ -70,22 +70,38 @@ h2 {
 FOOTER
 *************************/
 footer {
-  font-size; 0.75em;
+  position: fixed;
+  width: 100%;
+  font-size: 0.75em;
   text-align: center;
   clear: both;
-  padding-top: 50px;
-  color: #ccc;
-  position: fixed;
+  padding-top: 50px; /* might consdier % instead of px */
+  color: #333;
 }
 
 /************************
 NAVIGATION
 ************************/
-#nav {
+
+nav {
 	text-align: center;
 	padding: 10px 0;
 	color: #ccc;
-	color: #000;	
+	color: #000;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding: 0 10px 0 10px;
+  background-color: #ccc;
+}
+
+nav > ul {
+  list-style: none;
 }
 
 h1 {
