@@ -26,7 +26,46 @@ header {
 	padding: 0; 
 	width: 100%;
 	position: fixed;
+	z-index: 1;   /* for the hamburger button*/
 }
+
+/******************************
+HAMBURGER BUTTON STYLING
+******************************/
+#hamburger {
+    border: 1px solid #374C77;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    padding: 3px 4px 3px;
+    position: relative;
+    width: 25px;
+    background: #4569b2;
+    background: -moz-linear-gradient(top,  #4569b2 0%, #4062a5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4569b2), color-stop(100%,#4062a5));
+    background: -webkit-linear-gradient(top,  #4569b2 0%,#4062a5 100%);
+    background: -o-linear-gradient(top,  #4569b2 0%,#4062a5 100%);
+    background: -ms-linear-gradient(top,  #4569b2 0%,#4062a5 100%);
+    background: linear-gradient(to bottom,  #4569b2 0%,#4062a5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4569b2', endColorstr='#4062a5',GradientType=0 );
+}
+ 
+/*
+The white stripes in the hamburger button
+*/
+#hamburger div {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 2px 2px 2px 2px;
+    height: 2px;
+    margin-top: 3px;
+    width: 90%;
+}
+
+/****************************************
+END OF HAMBURGER BUTTON STYLING
+****************************************/
 
 #banner {
 	text-align: center;
@@ -76,9 +115,8 @@ footer {
   clear: both;
   padding-top: 50px;
   color: #ccc;
-  padding-top: 50px; /* might consdier % instead of px */
+  padding-top: 10%;
   color: #333;
-
 }
 
 /************************
@@ -100,6 +138,17 @@ nav {
 	clear: both;
     padding: 0 10px 0 10px;
     background-color: #ccc;
+}
+
+/***************************
+HAMBURGER BUTTON STYLING
+****************************/
+ nav {
+ 	left: 0px;
+    bottom: 0px;   /***********example had this on top*********/
+    position: fixed;
+    z-index: 0;
+    width: 70%;
 }
 
 nav > ul {
@@ -126,9 +175,12 @@ h2 {
 COLORS
 ************************/
 /*  site body  */
+
+
 body {
 	background-color: #fff;
 	color: #999;
+	overflow-x: hidden; /*this is for the hamburger button*/
 }
 
 /*  green header  */
