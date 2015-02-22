@@ -81,10 +81,11 @@ footer {
 /************************
 NAVIGATION
 ************************/
-nav {
+#nav {
 	text-align: center;
 	padding: 10px 0;
 	color: #ccc;
+	color: #000;	
 }
 
 h1 {
