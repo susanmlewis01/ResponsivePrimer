@@ -2,16 +2,40 @@
 GENERAL
 **********************/
 html {
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
-html body {
+body {
   font-family: 'Open Sans' sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
+  z-index: 1;  
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/****************************************
+navigation menu
+****************************************/
+
+nav{
+
+}
+
+
+.articletitle {
+  text-size: 3em;
+}
+
+
+
 /****************************************
 this holds the width of the entire page
 ****************************************/
@@ -24,40 +48,21 @@ this holds the width of the entire page
 /*************************
 HEADING
 **************************/
-header {
+#bannercontainer {
   float: center;
   margin: 0; 
   padding: 0; 
   width: 100%;
+  height: 20%;
   position: fixed;
   top: 0;
   background: #6ab47b;    /* green header*/
   border-color: #599a68;
-   -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
-    z-index: 2;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+  z-index: 2;   
 }
 
-#banner {
-  text-align: center;
-  margin: 0;
-  padding: 0 0 0;
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-    font-size: 1.5em;
-  font-weight: bold;
-}
-
-
-body {
-    overflow-x:hidden;
-}
-
-#logo {
-  text-align: center;
-  margin-top: 100;
-  padding-top: 100px;
-}
 /*
 using background color is important to cover the menu
 position absolute isset to cover the whole viewport
@@ -68,11 +73,33 @@ position absolute isset to cover the whole viewport
     position: relative;
     width: auto;
     height: 100%;
-    -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    margin-top: 10%;
     z-index: 1;
 }
 
+#banner {
+  height: 90%;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 0;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+    font-size: 1em;
+  font-weight: bold;
+}
+
+#logo {
+  text-align: center;
+
+}
+
+body {
+    overflow-x:hidden;
+}
+
+footer {
+  overflow-x: hidden;
+}
 /******************************
 HAMBURGER BUTTON STYLING
 ******************************/
@@ -86,13 +113,7 @@ HAMBURGER BUTTON STYLING
     position: relative;
     width: 25px;
     background: #6ab47b;
-    background: -moz-linear-gradient(top,  #6ab47b 0%, #4062a5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6ab47b), color-stop(100%,#4062a5));
-    background: -webkit-linear-gradient(top,  #6ab47b 0%,#4062a5 100%);
-    background: -o-linear-gradient(top,  #6ab47b 0%,#4062a5 100%);
-    background: -ms-linear-gradient(top,  #6ab47b 0%,#4062a5 100%);
-    background: linear-gradient(to bottom,  #6ab47b 0%,#000 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ab47b', endColorstr='#4062a5',GradientType=0);
+ 
 }
  
 /*
@@ -106,83 +127,29 @@ The white stripes in the hamburger button
     margin-top: 3px;
     width: 90%;
 }
+.articletitle {
 
-
-/****************************************
-Navigation container in the background
-****************************************/
-nav {
-    opacity: 0;
-    left: 0px;
-    top: 0px;
-    position: fixed;
-    z-index: 0;
-    width: 70%;
-    height: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background: #3e3c3d;
-    background: -moz-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e3c3d), color-stop(100%, #2d2c2d));
-    background: -webkit-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-    background: -o-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-    background: -ms-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
-    background: linear-gradient(to bottom, #3e3c3d 0%, #2d2c2d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e3c3d', endColorstr='#2d2c2d', GradientType=0);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.articlecontent {
+  font-size: 1em;
+  font-weight: normal;
 }
 
-/****************************************
-Style the navigation menu
-****************************************/
-nav ul {
-    list-style: none;
-    margin: 0;
-    width: 100%;
-    padding: 0;
-}
 
-nav li {
-    position: relative;
-    font-size: 1em;
-    font-weight: bold;
-    border-bottom: 1px solid #222222;
-    border-top: 1px solid #444444;
-    padding: 15px;
-}
-
-nav li a {
-    color: #fff;
-    text-decoration: none;
-}
   
-/*
-The Layer that will be layed over the content
-so that the content is unclickable while menu is shown
-*/
-#contentLayer {
-    display: none;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30%;
-    z-index: 2;
-}
 
 /*  banner text  */
-h1, h2 {
-  color: #000;
+#title, #subtitle {
+  color: #fff;
 }
 
 body {
   background-color: #ccc;
-  color: #999;
+  color: #797979;
 }
+
 footer {
   background-color: #6ab47b;
   }
